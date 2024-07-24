@@ -101,6 +101,14 @@ h3 {
   font-size: 30px;
   font-weight: bold;
 }
+
+.property-cards,
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 /*=================================
   Header styling starts here
 =================================*/
@@ -233,15 +241,7 @@ input[type="submit"] {
 
 /* property start */
 .property .wrapper { padding: 80px 0 100px; }
-
-.property-cards {
-  margin: 79px 16px 55px 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
+.property-cards {margin: 79px 16px 55px 0; }
 .property-card-content { padding: 37px 0 32px 30px; }
 
 .doller {
@@ -316,8 +316,62 @@ input[type="submit"] {
 /* property end */
 
 /* service start */
-.service {
-  background-color: #f3f4f6;
+.service { background-color: #f3f4f6; }
+.service .wrapper { padding: 30px 0; }
+
+.service-card {
+  box-sizing: border-box;
+  flex-basis: 23.5%;
+  padding: 30px 2%;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.service-icon {
+  margin-bottom: 60px;
+  position: relative;
+  display: block;
+  text-indent: -9999px;
+}
+
+.service-icon::before {
+  position: absolute;
+  left: 50%;
+  color: #0b1c43;
+  font-size: 64px;
+  font-family: "fontAwesome";
+  transform: translate(-50%);
+  text-indent: 0;
+}
+
+.service-card:nth-child(1) .service-icon::before { content: "\f015"; }
+.service-card:nth-child(2) .service-icon::before { content: "\f1ad"; }
+.service-card:nth-child(3) .service-icon::before { content: "\f015"; }
+.service-card:nth-child(4) .service-icon::before { content: "\f183"; }
+ 
+.service-card-title {
+  margin-bottom: 14px;
+  display: block;
+  color: #0b1c43;
+  font-size: 18px;
+  font-weight: bold;
+} 
+
+.service-card-discription {
+  color: #9c9c9c;
+  font-size: 15px;
+  line-height: 23px;
+  letter-spacing: .5px;
+}
+
+.service-link {
+  padding-bottom:12px ;
+  border-bottom: 3px solid #1a5655;
+  margin: 20px 0 18px;
+  color: #1a5655;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 /* service end */
 
