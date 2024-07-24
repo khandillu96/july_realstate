@@ -91,12 +91,84 @@ li {
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 87.35%; 
   margin: 0 auto;
+}
+
+/* common styling */
+h3 {
+  color: #0d204a;
+  font-size: 30px;
+  font-weight: bold;
 }
 /*=================================
   Header styling starts here
 =================================*/
+.container { position: relative; }
+
+header {
+  width:87.35%;
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+header .wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 29px 4.1% 29px 2.8%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #1a5655;
+}
+
+h1 {
+  color: #cddddd;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+h1 a { color: inherit; }
+
+.nev-link {
+  color: #cce7ff;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+nav {
+  flex-basis: 80%;
+  text-align: right;
+}
+
+nav li { margin-left: 3.7%; }
+.dropdown { margin-right: 2px;}
+
+.dropdown::after {
+  content: "\f105";
+  padding: 0 0 0 18px;
+  position: absolute;
+  top: 27px;
+  font-size: 13px;
+  font-family: "fontAwesome";
+  transform: rotate(90deg);
+}
+
+.hamburger { display: none; }
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  display: block;
+  background-color: #fff;
+  text-indent: -9999px;
+}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -104,6 +176,151 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* about banner start */
+.home-banner {
+  background: url(../images/img/home-bg.jpg) no-repeat bottom fixed;
+  background-size: cover;
+}
+
+.home-banner .wrapper {
+  padding: 252px 0 270px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #fffffc;
+  font-size: 34px;
+  font-weight: bold;
+  word-spacing: 3px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap ;
+}
+
+form div {
+  width: 39.1%;
+  margin-right: 55px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 20px 5.2%;
+  border: none;
+  border-radius: 30px;
+}
+
+input[type="text"]::placeholder {
+  font-size: 16px;
+  color: #757678;
+}
+
+.error { display: none; }
+
+input[type="submit"] {
+  padding: 18px 2.6%;
+  border-radius:30px;
+  border: 2px solid transparent;
+  background-color: #1a5656;
+  color: #fff;
+  font-size: 16px;
+}
+/* about banner end */
+
+/* property start */
+.property .wrapper { padding: 80px 0 100px; }
+
+.property-cards {
+  margin: 79px 16px 55px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.property-card-content { padding: 37px 0 32px 30px; }
+
+.doller {
+  padding-bottom: 6px;
+  border-bottom:2px solid #1a5655 ;
+  margin-bottom: 11px;
+  display: inline-block;
+  color: #1a5655;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.address {
+  margin-bottom: 17px;
+  color: #9c9c9c;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.address + p {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+ }
+
+ .address + p span { text-transform:uppercase; }
+
+.room-details  span::before{
+  padding-right: 8px;
+  color: #9c9c9c;
+  font-size: 18px;
+  font-family: "fontAwesome";
+}
+
+.bed::before { content: "\f236"; }
+.bath::before { content: "\f2cd"; }
+
+.bed {
+  margin-right: 13px;
+  display: inline-block;
+}
+
+.bed,
+.bath {
+  color: #9c9c9c;
+  font-size: 13px;
+}
+
+.property-card a {
+  padding: 10px 4.3%;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  margin-top: 24px ;
+  background-color: #1d5655;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.dot { text-align: center; }
+.dot .active { background-color: #0e2551; }
+.dot li { padding: 0 0.2%; }
+
+.dot a {
+  text-indent: -9999px;
+  background-color: #e9e8ed;
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
+}
+/* property end */
+
+/* service start */
+.service {
+  background-color: #f3f4f6;
+}
+/* service end */
+
 /*=================================
   main styling ends here
 =================================*/
