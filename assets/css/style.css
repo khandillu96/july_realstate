@@ -107,7 +107,8 @@ h3 {
 .customer-cards,
 .home-details,
 .counters,
-.agent-cards {
+.agent-cards,
+.footer-details {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -132,6 +133,8 @@ h3 {
   line-height: 24px;
   letter-spacing: 1px;
 }
+
+ header .active { color: #fcfdfd; }
 /*=================================
   Header styling starts here
 =================================*/
@@ -151,9 +154,9 @@ header .wrapper {
   padding: 29px 4.1% 29px 2.8%;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   background-color: #1a5655;
 }
 
@@ -164,13 +167,17 @@ h1 {
   text-transform: capitalize;
 }
 
-h1 a { color: inherit; }
+h1 a { 
+  color: inherit;
+  transition: all .3s;
+}
 
 .nev-link {
   color: #cce7ff;
   font-size: 15px;
   letter-spacing: 1px;
   text-transform: capitalize;
+  transition: all .3s;
 }
 
 nav {
@@ -243,11 +250,12 @@ input[type="text"] {
   padding: 20px 5.2%;
   border: none;
   border-radius: 30px;
+  outline: none;
 }
 
 input[type="text"]::placeholder {
-  font-size: 16px;
   color: #757678;
+  font-size: 16px;
 }
 
 .error { display: none; }
@@ -259,6 +267,7 @@ input[type="submit"] {
   background-color: #1a5656;
   color: #fff;
   font-size: 16px;
+  transition: all .3s;
 }
 /* about banner end */
 
@@ -323,6 +332,7 @@ input[type="submit"] {
   color: #fff;
   letter-spacing: 1px;
   text-transform: capitalize;
+  transition: all .3s;
 }
 
 .dot { text-align: center; }
@@ -330,11 +340,11 @@ input[type="submit"] {
 .dot li { padding: 0 0.2%; }
 
 .dot a {
-  text-indent: -9999px;
-  background-color: #e9e8ed;
   width: 8px;
   height: 8px;
   border-radius: 30px;
+  background-color: #e9e8ed;
+  text-indent: -9999px;
 }
 /* property end */
 
@@ -353,8 +363,8 @@ input[type="submit"] {
 
 .service-icon {
   margin-bottom: 60px;
-  position: relative;
   display: block;
+  position: relative;
   text-indent: -9999px;
 }
 
@@ -372,7 +382,6 @@ input[type="submit"] {
 .service-card:nth-child(2) .service-icon::before { content: "\f1ad"; }
 .service-card:nth-child(3) .service-icon::before { content: "\f015"; }
 .service-card:nth-child(4) .service-icon::before { content: "\f183"; }
- 
 .service-card-title { margin-bottom: 14px; }
 
 .service-card-discription {
@@ -415,12 +424,12 @@ input[type="submit"] {
 }
 
 .start::before {
-   content: "\f005";
-   float: left;
-   color: #f6cf4f;
-   font-size: 16px;
-   font-family: "fontAwesome";
-   text-indent: 0;
+  content: "\f005";
+  float: left;
+  color: #f6cf4f;
+  font-size: 16px;
+  font-family: "fontAwesome";
+  text-indent: 0;
 }
 
 .customer-card-title {
@@ -482,6 +491,7 @@ input[type="submit"] {
   position: relative;
   text-indent: -9999px;
   background-color: #d7d7d7;
+  transition: all .3s;
 }
 
 .home-icon::before {
@@ -543,17 +553,19 @@ input[type="submit"] {
   padding: 72px 0 85px;
   text-align: center;
 }
+
 .enroll h3 { letter-spacing: 1px; }
 
 .enroll a {
+  padding: 20px 2.2%;
+  border: 2px solid transparent;
+  border-radius: 30px ;
   margin-top: 26px;
   background-color: #1b5652;
   color: #fff;
-  padding: 20px 2.2%;
-  outline: none;
-  border-radius: 30px ;
   letter-spacing: 1px;
-  border: 2px solod transparent;
+  outline: none;
+  transition: all .3s;
 }
 /* enroll end */
 
@@ -622,8 +634,9 @@ input[type="submit"] {
   border-radius: 30px;
   display: inline-block;
   position: relative;
-  text-indent: -9999px;
   background-color: #0d204c;
+  text-indent: -9999px;
+  transition: all .3s;
 }
 
 .agents-icon::before {
@@ -650,12 +663,145 @@ input[type="submit"] {
 /*=================================
   footer styling starts here
 =================================*/
+footer { background-color: #efefef; }
+footer .wrapper { padding: 70px 0 65px; }
+.footer-details { align-items: start; }
+
+.footer-title {
+  margin-bottom: 18px;
+  display: inline-block;
+  color: #0d204a;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.footer-contact,
+.footer-sources,
+.footer-links {  
+  flex-basis: 32%;
+  color: #9c9c9c;
+}
+
+.footer-sources a,
+.footer-links a,
+.footer-contact-links a { color: inherit; }
+
+.footer-contact p {
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.footer-contact-link,
+.footer-sources-right li,
+.footer-sources-left li,
+.footer-links-lists li {
+  margin-bottom: 15px;
+  display: block;
+}
+
+.footer-sources-links { display: flex; }
+.footer-sources-right {margin-left: 95px; }
+.footer-sources-right .uppercase { text-transform: uppercase; }
+
+.footer-sources-right a,
+.footer-sources-left a,
+.footer-links-lists a,
+.footer-contact-link a {
+  font-size: 15px;
+  text-decoration: underline;
+  text-transform: capitalize;
+  transition: all .3s;
+}
+
+.footer-contact-link a { text-transform: lowercase; }
+.footer-icons { margin-top: 22px; }
+
+.footer-icon {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  display: inline-block;
+  position: relative;
+  background-color: #cbcbcb;
+  text-indent: -9999px;
+  transition: all .3s;
+}
+
+.footer-icon::before {
+  float: left;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #79777a;
+  content: "\f105";
+  font-size: 14px;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  transform: translate(-50%,-50%);
+}
+
+.footer-icons li:nth-child(1) .footer-icon::before { content: "\f16d"; }
+.footer-icons li:nth-child(2) .footer-icon::before { content: "\f099"; }
+.footer-icons li:nth-child(3) .footer-icon::before { content: "\f09a"; }
+.footer-icons li:nth-child(4) .footer-icon::before { content: "\f0e1"; }
+.footer-icons li:nth-child(5) .footer-icon::before { content: "\f0d2"; }
+.footer-icons li:nth-child(6) .footer-icon::before { content: "\f1e3"; }
+
+.copyright {
+  padding: 0 25%;
+  margin-top: 55px;
+  display: block;
+  color: #9c9c9c;
+  font-size: 15px;
+  line-height: 40px;
+  word-spacing: 5px;
+  text-align: center;
+}
+
+.copyright a {
+  color: inherit;
+  text-decoration: underline;
+  transition: all .3s;
+}
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-  
+@media only screen and (min-width: 1024px) {
+   header h1:hover,
+   .nev-link:hover { color: #fcfdfd; }
+
+   input[type="submit"]:hover,
+   .property-card a:hover,
+   .enroll a:hover { 
+    border: 2px solid #1c5554;
+    color: #1c5554;
+    background-color: #fff;
+   }
+
+  .agents-icon:hover { 
+    border: 2px solid #0d204c;
+    background-color: #fff;
+  }
+  .agents-icon:hover::before { color: #0d204c; }
+
+  .footer-sources-right a:hover,
+  .footer-sources-left a:hover,
+  .footer-links-lists a:hover,
+  .footer-contact-link a:hover,
+  .copyright a:hover { color: #0d204a; }
+
+  .footer-icon:hover {
+    border: 2px solid #fff;
+    background-color: #0d204a; 
+  }
+
+  .footer-icon:hover::before { color: #fff; }
+  .home-icon:hover { border: 2px solid #010b0e; }
 }
