@@ -108,7 +108,12 @@ h3 {
 .home-details,
 .counters,
 .agent-cards,
-.footer-details {
+.footer-details,
+.about-discription,
+.about-home-details-top,
+.about-home-details-bottom,
+.about-gallery,
+.teams-cards {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -117,7 +122,8 @@ h3 {
 
 .service-card-title,
 .customer-card-title,
-.home-biodata span {
+.home-biodata span,
+.team-title {
   display: block;
   color: #0b1c43;
   font-size: 18px;
@@ -214,13 +220,14 @@ nav li { margin-left: 3.7%; }
 /*=================================
   main styling starts here
 =================================*/
-/* about banner start */
+/* home banner start */
 .home-banner {
   background: url(../images/img/home-bg.jpg) no-repeat bottom fixed;
   background-size: cover;
 }
 
-.home-banner .wrapper {
+.home-banner .wrapper,
+.about-banner .wrapper {
   padding: 252px 0 270px;
   text-align: center;
 }
@@ -269,7 +276,43 @@ input[type="submit"] {
   font-size: 16px;
   transition: all .3s;
 }
+/* home banner end */
+
+/* about banner start */
+.about-banner {
+  background: url(../images/img/about-bg.jpg) no-repeat bottom fixed;
+  background-size: cover;
+}
+
+.about-banner .wrapper {
+  padding: 198px 0 165px;
+  text-align: center;
+}
+
+.about-banner h2 {
+  margin-bottom: 35px;
+  text-transform: capitalize;
+}
+
+.banner-links a {
+  color: #9c9c9c;
+  font-size: 15px;
+  text-transform: capitalize;
+  transition: all .3s;
+}
+
+.banner-links li { margin-right: 5px; }
+
+.banner-links li:nth-child(2)::before {
+  content: "\2f";
+  padding-right: 8px ;
+  color: #9c9c9c;
+  font-family: "fontAwesome";
+}
+
+.banner-links li:nth-child(1) a { color: #fff; }
 /* about banner end */
+
 
 /* property start */
 .property .wrapper { padding: 80px 0 100px; }
@@ -410,13 +453,15 @@ input[type="submit"] {
   flex-basis: 32%; 
 }
 
-.customer-card figure {
+.customer-card figure,
+.team-card figure {
   width: 90px;
   height: 90px;
   margin-bottom: 22px;
 }
 
-.customer-card figure img { border-radius: 50px; }
+.customer-card figure img,
+.team-card figure img { border-radius: 50px; }
 
 .start {
   display: inline-block;
@@ -437,14 +482,16 @@ input[type="submit"] {
   text-transform: capitalize;
 }
 
-.customer-content {
+.customer-content,
+.team-content {
   color: #000;
   font-size: 15px;
   line-height: 20px;
   letter-spacing: 1px;
 }
 
-.customer-designation {
+.customer-designation,
+.team-designation {
   margin: 22px 0; 
   color: #9c9c9c;
   font-size: 15px;
@@ -656,12 +703,61 @@ input[type="submit"] {
 .agent-icons li:nth-child(3) .agents-icon::before { content: "\f0e1"; }
 .agent-icons li:nth-child(4) .agents-icon::before { content: "\f16d"; }
 /* agent end */
+
+/* about page about section start */
+.about .wrapper { padding: 69px 0 70px; }
+
+.about-discription {
+  margin: 31px 0 116px;
+  align-items: start; 
+}
+
+.about-discription li { flex-basis: 49%; }
+.about-home { box-sizing: border-box; }
+
+.about-discription p {
+  margin-bottom: 18px;
+  color: #9c9c9c;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.about-home-details-top,
+.about-home-details-bottom { align-items: start; }
+.about-home-details-top { margin-bottom:118px; }
+.about-home-details-bottom { flex-direction: row-reverse; }
+.about-home-details-bottom .home-contents { flex-basis: 32.4%; }
+.about-home-details-bottom figure { flex-basis: 57.2%;}
+.about-home-details-bottom .home-biodata p { padding: 0; }
+.about-home-details-bottom .home-icon { width: 90px; }
+.about-gal-img { margin: 185px 0 0;}
+.about-gallery { margin-bottom: 110px; }
+.about-gallery .img { flex-basis: 32%; }
+.about-gallery .img:nth-child(2) { transform: translateY(50px); }
+/* about page about section end */
+
+/* about page team section start */
+.team { background-color: #f8f9fb; }
+.team .wrapper { padding: 70px 0 68px; }
+.teams-cards {margin: 52px 0 56px;}
+.team-card { flex-basis: 32.2%; }
+.team-card figure { margin-bottom: 24px; }
+.team-title { margin-bottom: 20px; }
+.team .team-designation { margin-bottom: 22px; }
+
+.team-content { 
+  margin-bottom: 18px;
+  color: #9c9c9c; 
+}
+/* about page team section end */
+
 /*=================================
-  main styling ends here
+main styling ends here
 =================================*/
 
 /*=================================
-  footer styling starts here
+footer styling starts here
 =================================*/
 footer { background-color: #efefef; }
 footer .wrapper { padding: 70px 0 65px; }
@@ -804,4 +900,6 @@ footer .wrapper { padding: 70px 0 65px; }
 
   .footer-icon:hover::before { color: #fff; }
   .home-icon:hover { border: 2px solid #010b0e; }
+
+  .about-banner a:hover { color: #fff;}
 }
