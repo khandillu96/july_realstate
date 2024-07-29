@@ -313,10 +313,10 @@ input[type="submit"] {
 .banner-links li:nth-child(1) a { color: #fff; }
 /* about banner end */
 
-
 /* property start */
 .property .wrapper { padding: 80px 0 100px; }
 .property-cards {margin: 79px 16px 55px 0; }
+.property-card { flex-basis: 31.8%; }
 .property-card-content { padding: 37px 0 32px 30px; }
 
 .doller {
@@ -521,6 +521,9 @@ input[type="submit"] {
 
 .home-contents { flex-basis: 40%; }
 .home-details { flex-basis: 55%; }
+
+.about-home figure ,
+.home-details figure { flex-basis: 57.2%; }
 
 .home-data {
   margin-bottom: 46px;
@@ -868,7 +871,7 @@ footer .wrapper { padding: 70px 0 65px; }
 =================================*/ 
 
 /*media query starts*/
-/*media query for 995px starts here*/
+/*media query for hover effect starts here for 1024px screen*/
 @media only screen and (min-width: 1024px) {
    header h1:hover,
    .nev-link:hover { color: #fcfdfd; }
@@ -902,4 +905,159 @@ footer .wrapper { padding: 70px 0 65px; }
   .home-icon:hover { border: 2px solid #010b0e; }
 
   .about-banner a:hover { color: #fff;}
+}
+
+/*media query for 1024px starts here*/
+@media  only screen and (max-width: 1024px){
+  .service-card {
+    flex-basis: 48%;
+    margin-bottom: 35px;
+  }
+
+  .counter {
+    flex-basis: 50%;
+    margin-bottom: 75px;
+    text-align: center;
+  }
+
+  .home .wrapper { padding-bottom: 0; }
+}
+
+/*media query for 995px starts here*/
+@media  only screen and (max-width: 995px){
+  .property-cards { margin: 79px 0 50px; }
+
+  .customer-card,
+  .property-card,
+  .team-card { flex-basis: 48%; }
+
+  .customer-card:nth-child(1),
+  .property-card:nth-child(1),
+  .team-card:nth-child(1) { display: none; }
+
+  .home-contents,
+  .home-contents + figure { flex-basis: 100%; }
+
+  .agent h3 + p { padding: 0 20%; }
+  .home h3 + p { padding: 0 15%; }
+  .agent-cards { justify-content: center; }
+  .agent-desination + p { padding: 0 6%; }
+
+  .agent-card { 
+    flex-basis: 80%;
+    margin-bottom: 100px;
+  }
+
+  .about-gallery .img {
+    flex-basis: 85%; 
+    margin-bottom: 30px;
+  }
+
+  .about-gallery { justify-content: center; }
+  .about-home-details-bottom { display: block; }
+  .about-gallery .img:nth-child(2) { transform: translateY(0px); }
+
+  .footer-contact,
+  .footer-sources,
+  .footer-links { 
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/*media query for 768px starts here*/
+@media only screen and (max-width: 768px) {
+  .wrapper { width: 90%; }
+  .hamburger { display: block; }
+  .navbar { display: none; }
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+  .navbar.active { display: block; }
+
+  .navbar {
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    background-color: #184e4e;
+    transform: translate(-50%);
+    }
+    
+    .dropdown::after { padding: 0 0 0 68px; }
+
+    .navbar li {
+      margin: 20px;
+      display: block;
+      text-align: center;
+    }
+
+    .home-banner .wrapper, 
+    .about-banner .wrapper { padding: 220px 0; }
+    form div { width: 63.5% }
+    .counter { margin-bottom: 50px; }
+
+    .home h3,
+    .home h3 + p,
+    .agent h3 + p { padding:0; }
+    
+    .about-discription { 
+      margin-bottom: 50px;
+      display: block;
+    }
+
+    .copyright {
+      padding: 0 6%;
+      line-height: 30px;
+    }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .navbar {  top: 50px; }
+  header .wrapper { padding: 16px 4%; }
+
+  .home-banner .wrapper,
+  .about-banner .wrapper { padding: 200px 0 150px; }
+
+  h2 { font-size: 24px;}
+  form div { width: 65%;}
+
+  .customer-card,
+  .property-card,
+  .team-card {
+    flex-basis: 100%;
+    margin: 0 0 50px 0;
+  }
+
+  .team-card { margin-bottom: 70px; }
+  .teams-cards { margin: 52px 0 0; }
+  .customer h3 { margin-bottom: 50px; }
+  .service-card { flex-basis: 100%; }
+  .agent .wrapper { padding-bottom: 0; }
+  .enroll a { padding:  16px 4%; }
+  .home-biodata p { padding: 0;}
+  .about-gallery .img { flex-basis: 100%; }
+}
+
+/*media query for 480px starts here*/
+@media only screen and (max-width: 480px){
+  .home-banner .wrapper,
+  .about-banner .wrapper { padding: 150px 0 100px; }
+
+  form div {
+    width: 100%; 
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+
+  .counters .counter {
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  input[type="submit"] { padding: 10px 10%; }
+  form { justify-content: left; }
 }
