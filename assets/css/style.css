@@ -192,7 +192,7 @@ nav {
 }
 
 nav li { margin-left: 3.7%; }
-.dropdown { margin-right: 2px;}
+.dropdown { margin-right: 2px; }
 
 .dropdown::after {
   content: "\f105";
@@ -449,8 +449,8 @@ input[type="submit"] {
 
 .customer-card {   
   box-sizing: border-box;
-  margin: 53px 0 35px ;
   flex-basis: 32%; 
+  margin: 53px 0 35px ;
 }
 
 .customer-card figure,
@@ -534,9 +534,9 @@ input[type="submit"] {
 
 .home-icon {
   width: 85px;
+  height: 85px;
   border-radius: 50px;
   border: 2px solid transparent;
-  height: 85px;
   display: inline-block;
   position: relative;
   text-indent: -9999px;
@@ -546,10 +546,10 @@ input[type="submit"] {
 
 .home-icon::before {
   content: "\f015";
+  float: left;
   position: absolute;
   left: 50%;
   top: 50%;
-  float: left;
   color: #010b0e;
   font-size: 18px;
   font-family: "fontAwesome";
@@ -563,7 +563,7 @@ input[type="submit"] {
 
 .home-biodata {
   margin-left: 15px;
-  flex: 78%; 
+  flex-basis: 78%; 
 }
 
 .home-biodata span {
@@ -775,7 +775,6 @@ footer .wrapper { padding: 70px 0 65px; }
   text-transform: uppercase;
 }
 
-
 .footer-contact,
 .footer-sources,
 .footer-links {  
@@ -831,11 +830,11 @@ footer .wrapper { padding: 70px 0 65px; }
 }
 
 .footer-icon::before {
+  color: #79777a;
   float: left;
   position: absolute;
   left: 50%;
   top: 50%;
-  color: #79777a;
   content: "\f105";
   font-size: 14px;
   font-family: "fontAwesome";
